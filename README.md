@@ -1,31 +1,51 @@
+##De que va la el codigo:
 
-> Abra esta pagina en [https://luismariosanchez.github.io/microbit-luismariosanchez/](https://luismariosanchez.github.io/microbit-luismariosanchez/)
+Facil y sencillo, cortita y al pie, pedimos por boton(A) que se nos pase un por numero de veces pulsada un numero(ej:2), y para hacer efectivo esta succesion se tiene que pulsar el boton "B",al pulsar se nos printara por pantalla los numeros acorde a las veces pulsadas(2), haciendo la funcion de una pendiente que esta predefinida:
+(3x2 + x + 1), asi el resultado ser:5,15 (solo para este ejemplo):ok_hand:.
 
-## Usar como extensión
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⠤⢤⣄⡀⠀⢀⣀⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠁⠀⠀⠀⠈⣿⡞⠉⠉⠀⠉⠉⠉⠓⠶⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠏⠀⠀⠀⠀⠀⠀⣠⣷⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡞⠉⠉⢉⡑⠒⠚⠉⠈⠳⠦⣤⠤⠤⠶⠶⠶⠶⣄⠀⠀⠘⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣇⣴⣾⣿⠁⠀⠀⠀⠀⠀⠀⠈⠳⢤⡀⠀⠀⠀⠸⣆⠀⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⠿⠭⣻⣦⡀⠀⠀⢀⡤⣶⣦⣤⣙⠀⠀⠀⢠⡟⠀⠀⠀⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣅⣿⣿⣦⣈⣻⡇⠀⣰⡟⢿⣿⣻⣒⢿⠀⠀⢀⡼⠃⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣽⠯⠽⣭⣛⣷⡾⠁⠀⣿⣧⠼⣿⣿⣷⣸⠀⢠⡞⠁⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠉⠀⠀⠀⠀⠉⢩⡏⠀⠀⠘⡿⠛⠛⠓⠷⠯⢀⡞⢀⡴⢶⡶⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⠁⠀⠀⠀⠀⠀⠀⣠⡟⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⣿⣧⢯⡶⠃⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠏⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠠⠞⣹⡟⠀⠀⠀⠀⠀⠀⠈⠁⠘⣅⣤⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡞⠃⠀⠀⠀⠀⠀⢀⡴⠛⠀⠀⠀⣠⡴⠋⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠈⠻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⢀⡼⣧⣀⣀⠴⠊⠁⠀⠀⠀⢀⡼⠳⣦⡀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡿⠀⠀⠀⠀⠀⠀⠐⣸⣏⣀⣀⣀⣀⣀⣠⡤⠴⠛⠁⢠⡼⠋⢹⡇⠀⠀⠀⠀⠀⠀⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠃⠀⠀⠀⠀⠀⠀⠰⣿⡀⠉⠉⠉⠉⠉⠀⢀⣀⡤⠖⠋⢀⣀⣼⠀⠀⠀⠀⠀⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡃⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠲⡖⠒⠒⠛⠋⠁⣠⠴⠚⢛⡿⠃⠀⠀⠀⠀⠀⠀⠀⠐⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠀⠀⠀⠀⠀⢸⡟⠛⠾⢇⣀⣀⣀⣀⣠⣇⡤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⡀⠀⠀⠀⠀⠀⠈⠃⠀⣄⣀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⠙⠈⠉⠓⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀⢘⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠴⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣾⠛⢻⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⣦⣤⣾⣿⠋⠀⣻⠳⣤⣄⡀⢀⣀⡤⢶⣿⣿⣥⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣶⡟⠲⢦⣼⠉⢰⣼⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣯⣿⣵⣿⠷⠛⣿⣄⣠⣿⠛⠉⠁⣠⡾⣿⠋⠙⣯⣽⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⣾⠟⠲⣄⠀⠻⡄⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣿⣁⢘⣿⠃⠀⣤⠟⠋⠈⢹⣤⣠⡞⣿⠖⠟⠀⠀⠁⠀⣸⠀⠙⠓⢦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢸⣤⠀⠀⠀⢱⡶⠃⠀⢹⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡶⠿⠿⢭⣍⡁⣠⠞⠁⠀⠀⠀⠐⠟⠉⠀⢿⣶⠆⠀⠀⠀⢺⣯⠀⢀⣾⡋⠉⣷⠀⠀⠀⠀⠀⠀⠀⠀
+⣴⣿⠋⠙⠳⣤⣴⡃⠀⠀⢸⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡞⠁⠀⠀⠀⢨⡿⠅⠀⣤⠖⢦⡀⠀⠀⠀⠀⠀⣯⣥⣿⠓⠒⠚⠋⣠⠛⠀⠙⠻⣏⠀⠀⠀⠀⠀⠀⠀⠀
+⠻⣴⠰⣆⣀⣸⠏⠉⠻⠆⠼⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡅⠀⠀⠀⣴⢿⣶⠶⠾⠇⠀⠞⢻⣦⡶⠿⡆⠀⠀⢯⡀⠀⠀⠀⢰⠏⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⠀⠀⠀
+⠀⠙⠛⢿⣏⠉⠀⠀⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⠀⠀⣰⣿⣷⡤⠖⣻⠇⠉⢻⣤⠀⠀⠀⣠⣾⣿⠀⢠⡇⠀⢀⣿⠛⢦⡀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠈⠑⢦⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠙⠛⠛⠳⣄⠀⠀⠀⠀⠉⠳⢤⡀⠀⣰⠇⠀⠀⠀⢠⠏⠀⠀⣟⠋⣀⣄⡀⢸⣿⣿⠀⠀⢧⣀⣾⠁⠀⠀⠉⠳⢿⣹⠷⣄⠀⠀⠀⠀⠀⠀⠈⢳⡄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢧⡀⠀⠀⠀⠀⠀⠉⢳⣿⡀⠀⠀⢀⡟⠀⠀⠀⠙⠚⠋⠉⣯⠿⠛⠉⠀⠀⠀⠉⠉⢷⡀⠀⠀⠀⠀⠀⠀⠈⠳⣤⡀⠀⣀⡀⠀⠀⠙⣆⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠳⣄⠀⠀⠀⠀⢠⠟⠸⠟⢳⣦⣾⠀⠀⠀⠀⠀⠀⠀⠘⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⠶⠶⠶⠶⠖⠛⠛⠛⠉⠉⠉⠁⠀⠀⠀⠀⢻⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⢠⡟⠀⠀⠀⡸⢿⡇⠀⠀⠀⠀⠀⠀⠀⠀⢻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡾⠀⣠⡟⠛⣷⢾⠁⠀⠀⠀⠀⠀⠀⠀⢀⣬⢷⡀⠀⠀⠀⠀⠀⠀⠀⣠⡤⢤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠼⠋
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠟⠚⠋⠉⠉⠉⡏⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⡈⢷⣤⣀⣀⣠⡤⠴⠞⠉⠀⠀⠀⠉⠉⠉⠑⠒⠒⠒⠒⠒⠒⠊⠉⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀⠀⠀⠀⠀⠀⣷⠀⠀⠀⢀⣀⣠⠖⠲⡄⠈⠙⠋⠀⠀⢀⡾⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣇⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⡾⡏⠋⠀⠲⠿⣤⡀⠀⠀⠀⠸⣧⣈⣳⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡟⢻⠀⠀⠀⠀⠀⡼⠻⣇⠀⢀⣽⡆⠀⠀⠀⡄⣸⡇⠀⠀⠀⠀⠈⢿⡇⠙⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣇⣼⣀⡀⠀⠀⣸⠃⠀⢻⡐⣟⠀⢁⡀⠀⠘⣿⡃⠀⠀⠀⣠⠏⠹⣿⢿⣛⠛⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⠁⢈⡿⠀⢰⡇⠀⠀⠀⣷⡉⠉⠉⠙⠳⠶⠟⠁⠀⢀⡴⠃⠀⠀⢸⡄⠉⢦⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⠛⠁⠀⡿⠀⠀⠀⠀⠈⢷⡀⠀⠀⠀⠀⠀⠀⢠⡞⠀⠀⠀⠀⠀⢷⠀⢸⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣆⠀⣸⠁⠀⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⣰⠟⠀⠀⠀⠀⠀⠀⠸⣦⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡎⢷⡟⠀⠀⠀⠳⢤⡀⠀⠀⢳⡀⠀⠀⣰⠇⠀⠀⠀⠀⠀⠀⠀⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣇⠈⠁⠀⠀⠀⠀⠀⠙⢦⠀⠀⠹⣦⣴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⠀⠀⠀⠈⢣⡀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-Este repositorio puede ser añadido como una **extensión** en MakeCode.
-
-* abra [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* haga clic en **New Project**
-* haga clic en **Extensiones** en el menú del engranaje
-* buscar **https://github.com/luismariosanchez/microbit-luismariosanchez** e importar
-
-## Edita este proyecto ![Insignia de estado de compilación](https://github.com/luismariosanchez/microbit-luismariosanchez/workflows/MakeCode/badge.svg)
-
-Para editar este repositorio en MakeCode.
-
-* abra [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* haga clic en **Import** luego haga clic en **Import URL**
-* pegue **https://github.com/luismariosanchez/microbit-luismariosanchez** y haga clic en importar
-
-## Vista previa de bloques
-
-Esta imagen muestra el código de los bloques de la última confirmación en master.
-Esta imagen puede tardar unos minutos en actualizarse.
-
-![Una vista renderizada de los bloques](https://github.com/luismariosanchez/microbit-luismariosanchez/raw/master/.github/makecode/blocks.png)
-
-#### Metadatos (utilizados para búsqueda, renderizado)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
